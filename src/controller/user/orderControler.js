@@ -21,7 +21,7 @@ export const postOrder = async (req, res) => {
       ],
     });
 
-    if (order.length == totalRooms) {
+    if (order.length === parseInt(totalRooms)) {
       return res.status(400).json({
         data: [],
         errors: [
