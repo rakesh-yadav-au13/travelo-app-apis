@@ -24,7 +24,6 @@ const auth = async (req, res, next) => {
     const userData = await userSchema.findById(decode.id, {
       password: 0,
     });
-    console.log(userData);
     if (!userData) {
       return res.status(400).json({
         data: {},

@@ -20,8 +20,9 @@ export const postOrder = async (req, res) => {
         { checkOut: { $gt: checkInDate } },
       ],
     });
-    if (order.length === totalRooms) {
-      return res.status(200).json({
+
+    if (order.length == totalRooms) {
+      return res.status(400).json({
         data: [],
         errors: [
           {
